@@ -1,17 +1,14 @@
-/* =========================================================
-   CINEFLIX · ANIMATIONS
-   ========================================================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
-  will-change: opacity, transform;
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); will-change: opacity, transform; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-left.is-visible { transform: translateX(0); }
+.reveal-right { transform: translateX(40px); }
+.reveal-right.is-visible { transform: translateX(0); }
+.reveal-scale { transform: scale(0.94); }
+.reveal-scale.is-visible { transform: scale(1); }
 
+/* KEYFRAMES */
 @keyframes orbFloat {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33%      { transform: translate(-40px, 30px) scale(1.1); }
@@ -25,7 +22,35 @@
   0%, 100% { opacity: 1; transform: scale(1); }
   50%      { opacity: 0.4; transform: scale(0.8); }
 }
+@keyframes posterShine {
+  0%   { transform: translateX(-100%); }
+  60%  { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes scrollDot {
+  0%   { opacity: 0; transform: translateY(-6px); }
+  40%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(6px); }
+}
+@keyframes charIn {
+  to { opacity: 1; transform: translateY(0) rotateX(0); }
+}
+@keyframes spinSlow { to { transform: rotate(360deg); } }
 
+/* PRELOADER */
+.preloader { position: fixed; inset: 0; z-index: 9999; background: var(--bg); display: grid; place-items: center; transition: opacity 0.6s var(--ease-out), visibility 0.6s; }
+.preloader.is-done { opacity: 0; visibility: hidden; }
+.preloader-mark { text-align: center; }
+.preloader-mark .brand-mark { width: 56px; height: 56px; border-radius: 14px; font-size: 1.6rem; margin: 0 auto 24px; animation: logoPulse 1.4s ease-in-out infinite; }
+.preloader-bar { width: 120px; height: 2px; background: var(--line); border-radius: 2px; margin: 0 auto; overflow: hidden; }
+.preloader-bar i { display: block; height: 100%; width: 40%; background: var(--purple-500); border-radius: 2px; animation: preloadBar 1.2s ease-in-out infinite; }
+@keyframes logoPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+@keyframes preloadBar { 0% { transform: translateX(-100%); } 100% { transform: translateX(350%); } }
+
+/* TILT */
+[data-tilt] { transition: transform 0.4s var(--ease-out); transform-style: preserve-3d; will-change: transform; }
+
+/* SCROLL LOCK */
 body.no-scroll { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -36,4 +61,5 @@ body.no-scroll { overflow: hidden; }
     scroll-behavior: auto !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .hero-title .char { opacity: 1; transform: none; animation: none; }
 }
