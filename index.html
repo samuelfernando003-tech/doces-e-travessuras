@@ -19,10 +19,18 @@
 </head>
 <body>
 
+  <!-- ═══════════════════ PRELOADER ═══════════════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-mark">
+      <span class="brand-mark">C</span>
+      <div class="preloader-bar"><i></i></div>
+    </div>
+  </div>
+
   <div class="grain" aria-hidden="true"></div>
   <div class="progress-bar" id="progress"></div>
 
-  <!-- ══════════════════════════ NAV ══════════════════════════ -->
+  <!-- ═══════════════════ NAV ═══════════════════ -->
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="#" class="brand">
@@ -32,8 +40,8 @@
 
       <nav class="nav-links" aria-label="Principal">
         <a href="#sobre">O que é</a>
-        <a href="#video">Demo</a>
         <a href="#servidores">Servidores</a>
+        <a href="#video">Demo</a>
         <a href="#comparacao">Comparativo</a>
         <a href="#planos">Planos</a>
         <a href="#faq">Dúvidas</a>
@@ -42,7 +50,7 @@
       <div class="header-actions">
         <a href="#planos" class="btn btn-ghost btn-sm">Planos</a>
         <!-- ⚠️ TROQUE 5500000000000 PELO SEU WHATSAPP -->
-        <a href="https://wa.me/91980941906?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Assinar</a>
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-sm magnetic">Assinar</a>
         <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
           <span></span><span></span>
         </button>
@@ -53,23 +61,23 @@
   <div class="mobile-menu" id="mobileMenu">
     <nav>
       <a href="#sobre">O que é</a>
-      <a href="#video">Demo</a>
       <a href="#servidores">Servidores</a>
+      <a href="#video">Demo</a>
       <a href="#comparacao">Comparativo</a>
       <a href="#planos">Planos</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <!-- ⚠️ TROQUE O NÚMERO AQUI TAMBÉM -->
-    <a href="https://wa.me/91980941906?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary">Assinar pelo WhatsApp</a>
+    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary">Assinar pelo WhatsApp</a>
   </div>
 
   <main>
 
-    <!-- ══════════════════════════ HERO COM VÍDEO ══════════════════════════ -->
+    <!-- ═══════════════════ HERO ═══════════════════ -->
     <section class="hero" id="topo">
       <div class="hero-bg" aria-hidden="true">
-        <div class="hero-orb"></div>
+        <div class="hero-orb" data-orb></div>
         <div class="hero-grid-lines"></div>
+        <canvas class="hero-particles" id="particles"></canvas>
       </div>
 
       <div class="container hero-inner">
@@ -79,7 +87,7 @@
             Novo · Catálogo atualizado hoje
           </div>
 
-          <h1 class="hero-title reveal">
+          <h1 class="hero-title" data-split>
             Todo o streaming do mundo. Em <em>um</em> só app.
           </h1>
 
@@ -91,8 +99,7 @@
           </p>
 
           <div class="hero-actions reveal">
-            <!-- ⚠️ TROQUE O NÚMERO -->
-            <a href="https://wa.me/91980941906?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-lg magnetic">
               Começar agora
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -107,19 +114,23 @@
           </dl>
         </div>
 
-        <!-- ══════════════════════════ VÍDEO NO MOCKUP ══════════════════════════ -->
-        <div class="hero-visual reveal">
+        <!-- Mockup animado sem vídeo -->
+        <div class="hero-visual reveal" data-tilt>
           <div class="device">
             <div class="device-chrome">
               <span></span><span></span><span></span>
               <div class="device-live"><i></i> AO VIVO</div>
             </div>
             <div class="device-screen">
-              <!-- ⚠️ O VÍDEO FICA AQUI. COLOQUE O ARQUIVO EM assets/demo.mp4 -->
-              <video class="demo-video" autoplay muted loop playsinline preload="metadata" poster="">
-                <source src="assets/VID-20261016-WA0003.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo HTML5.
-              </video>
+              <div class="device-glow"></div>
+              <div class="poster-grid">
+                <div class="poster poster-1"></div>
+                <div class="poster poster-2"></div>
+                <div class="poster poster-3"></div>
+                <div class="poster poster-4"></div>
+                <div class="poster poster-5"></div>
+                <div class="poster poster-6"></div>
+              </div>
             </div>
           </div>
           <div class="float-chip chip-price"><span>R$ 20</span><small>/mês</small></div>
@@ -127,30 +138,19 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6L12 2z" fill="currentColor"/></svg>
             4K · HDR
           </div>
+          <div class="float-chip chip-live">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" opacity=".6"/></svg>
+            Transmissão estável
+          </div>
         </div>
       </div>
+
+      <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo">
+        <span></span>
+      </a>
     </section>
 
-    <!-- ══════════════════════════ SEÇÃO DE VÍDEO DEDICADA ══════════════════════════ -->
-    <section class="video-section" id="video">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow"><span class="eyebrow-dot"></span>Veja em ação</div>
-          <h2>O Cineflix <em>por dentro</em>.</h2>
-          <p>Uma prévia real da interface, do catálogo e da experiência de navegação do app.</p>
-        </div>
-
-        <div class="video-wrapper reveal">
-          <!-- O MESMO ARQUIVO DE VÍDEO, COM CONTROLES PARA O USUÁRIO ASSISTIR -->
-          <video class="demo-video-large" controls playsinline preload="metadata">
-            <source src="assets/VID-20261016-WA0003.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo HTML5.
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ MARQUEE ══════════════════════════ -->
+    <!-- ═══════════════════ MARQUEE ═══════════════════ -->
     <div class="marquee" aria-label="Plataformas disponíveis">
       <div class="marquee-track">
         <span>Netflix</span><span aria-hidden="true">·</span>
@@ -176,7 +176,7 @@
       </div>
     </div>
 
-    <!-- ══════════════════════════ SOBRE ══════════════════════════ -->
+    <!-- ═══════════════════ SOBRE ═══════════════════ -->
     <section class="about" id="sobre">
       <div class="container about-inner">
         <div class="about-head">
@@ -185,13 +185,13 @@
         </div>
 
         <div class="about-grid">
-          <div class="about-text reveal">
+          <div class="about-text reveal reveal-left">
             <p>O <strong>Cineflix</strong> é um aplicativo de entretenimento IPTV que reúne em um só lugar o melhor catálogo de filmes, séries, novelas, desenhos e documentários do mundo — mais os canais ao vivo que você não encontra em outro lugar.</p>
             <p>Em vez de pagar 8 assinaturas diferentes todo mês, você paga <strong>uma única mensalidade</strong> de R$&nbsp;20 e tem acesso a tudo. Sem fidelidade, sem burocracia, sem taxa de adesão.</p>
             <div class="about-quote"><p>“Cancelamos oito assinaturas. Ficamos com <em>uma</em>.”</p></div>
           </div>
 
-          <ul class="about-features reveal">
+          <ul class="about-features reveal reveal-right">
             <li>
               <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <div><strong>Acesso imediato</strong><span>Liberado em minutos após o pagamento.</span></div>
@@ -213,7 +213,7 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ STATS ══════════════════════════ -->
+    <!-- ═══════════════════ STATS ═══════════════════ -->
     <section class="stats-band">
       <div class="container">
         <div class="stats-row">
@@ -225,7 +225,68 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ SERVIDORES ══════════════════════════ -->
+    <!-- ═══════════════════ BENEFÍCIOS ═══════════════════ -->
+    <section class="benefits" id="beneficios">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Por que escolher o Cineflix</div>
+          <h2>Tudo o que você precisa. <em>Nada</em> do que não precisa.</h2>
+          <p>Uma experiência pensada para quem só quer apertar o play e assistir — sem burocracia, sem taxas escondidas.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal" data-tilt>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Ativação em minutos</h3>
+            <p>Pague e receba o acesso em poucos minutos. Sem espera, sem cadastro longo.</p>
+          </article>
+
+          <article class="benefit-card reveal" data-tilt>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 18v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Funciona em qualquer tela</h3>
+            <p>Celular, tablet, computador, Smart TV, TV Box e Fire Stick.</p>
+          </article>
+
+          <article class="benefit-card reveal" data-tilt>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6L12 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Full HD e 4K</h3>
+            <p>Qualidade de imagem cinematográfica na maior parte do catálogo.</p>
+          </article>
+
+          <article class="benefit-card reveal" data-tilt>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Atualização diária</h3>
+            <p>Lançamentos, novelas e temporadas novas toda semana no catálogo.</p>
+          </article>
+
+          <article class="benefit-card reveal" data-tilt>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Sem fidelidade</h3>
+            <p>Não assinou mais? Simplesmente não renova. Zero multa, zero letra miúda.</p>
+          </article>
+
+          <article class="benefit-card reveal" data-tilt>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Suporte humano</h3>
+            <p>Atendimento via WhatsApp por pessoas reais — não por robôs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SERVIDORES ═══════════════════ -->
     <section class="servers" id="servidores">
       <div class="container">
         <div class="section-head reveal">
@@ -235,7 +296,7 @@
         </div>
 
         <div class="server-grid">
-          <article class="server-card reveal">
+          <article class="server-card reveal reveal-left">
             <span class="server-ghost">C</span>
             <div class="server-tag"><span class="tag-dot"></span>Servidor Cine</div>
             <h3>O catálogo completo</h3>
@@ -248,7 +309,7 @@
             </ul>
           </article>
 
-          <article class="server-card server-card--bit reveal">
+          <article class="server-card server-card--bit reveal reveal-right">
             <span class="server-ghost">B</span>
             <div class="server-tag"><span class="tag-dot"></span>Servidor Bit</div>
             <h3>Focado em canais ao vivo</h3>
@@ -264,7 +325,99 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ COMPARATIVO ══════════════════════════ -->
+    <!-- ═══════════════════ COMO FUNCIONA ═══════════════════ -->
+    <section class="how" id="como-funciona">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Como funciona</div>
+          <h2>Do zero ao play em <em>três</em> passos.</h2>
+          <p>Sem instalação complicada, sem configuração técnica. Tudo pronto em minutos.</p>
+        </div>
+
+        <div class="how-grid">
+          <div class="how-step reveal">
+            <span class="how-num">01</span>
+            <h3>Escolha seu plano</h3>
+            <p>Mensal, trimestral, semestral ou anual. Você decide o quanto quer economizar.</p>
+          </div>
+          <div class="how-step reveal">
+            <span class="how-num">02</span>
+            <h3>Pague do seu jeito</h3>
+            <p>Pix, cartão de crédito ou boleto. Escolha o que for mais prático para você.</p>
+          </div>
+          <div class="how-step reveal">
+            <span class="how-num">03</span>
+            <h3>Receba e assista</h3>
+            <p>Em minutos você recebe seu acesso. Baixe o app, faça login e comece a assistir.</p>
+          </div>
+        </div>
+
+        <div class="how-cta reveal">
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-lg magnetic">
+            Começar agora
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ VÍDEO — ÚNICO LUGAR ═══════════════════ -->
+    <section class="video-section" id="video">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Veja em ação</div>
+          <h2>O Cineflix <em>por dentro</em>.</h2>
+          <p>Uma prévia real da interface, do catálogo e da experiência de navegação do app.</p>
+        </div>
+
+        <div class="video-wrapper reveal">
+          <div class="video-glow" aria-hidden="true"></div>
+          <video class="demo-video-large" controls playsinline preload="metadata" poster="">
+            <source src="assets/VID-20261016-WA0003.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ DISPOSITIVOS ═══════════════════ -->
+    <section class="devices" id="dispositivos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Dispositivos compatíveis</div>
+          <h2>Onde <em>você</em> quiser. Do jeito <em>que</em> quiser.</h2>
+        </div>
+
+        <div class="devices-grid">
+          <div class="device-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M12 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Celular</span>
+          </div>
+          <div class="device-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="13" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M8 20h8M12 17v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span>Computador</span>
+          </div>
+          <div class="device-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="2" width="16" height="20" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M12 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Tablet</span>
+          </div>
+          <div class="device-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 20h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span>Smart TV</span>
+          </div>
+          <div class="device-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="10" rx="1.5" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="12" r="1" fill="currentColor"/><circle cx="17" cy="12" r="1" fill="currentColor"/></svg>
+            <span>TV Box</span>
+          </div>
+          <div class="device-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 3h8l-1 9h-6L8 3zM6 21h12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span>Fire Stick</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ COMPARATIVO ═══════════════════ -->
     <section class="compare" id="comparacao">
       <div class="container">
         <div class="section-head reveal">
@@ -274,7 +427,7 @@
         </div>
 
         <div class="compare-grid">
-          <div class="compare-col compare-col--them reveal">
+          <div class="compare-col compare-col--them reveal reveal-left">
             <header><span class="compare-kicker">Assinando separadamente</span><span class="compare-total">R$&nbsp;245<small>/mês</small></span></header>
             <ul>
               <li><span>Netflix</span><span>R$ 44,90</span></li>
@@ -288,7 +441,7 @@
             </ul>
           </div>
 
-          <div class="compare-col compare-col--us reveal">
+          <div class="compare-col compare-col--us reveal reveal-right">
             <span class="compare-badge">ECONOMIZE 91%</span>
             <header><span class="compare-kicker">Com o Cineflix</span><span class="compare-total">R$&nbsp;20<small>/mês</small></span></header>
             <ul>
@@ -307,7 +460,7 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ PLANOS ══════════════════════════ -->
+    <!-- ═══════════════════ PLANOS ═══════════════════ -->
     <section class="plans" id="planos">
       <div class="container">
         <div class="section-head reveal">
@@ -319,7 +472,7 @@
         <div class="plans-grid">
           <article class="plan reveal">
             <header><span class="plan-name">Mensal</span><p class="plan-desc">Para começar sem compromisso.</p></header>
-            <div class="plan-price"><small>R$</small>20<small>,00</small></div>
+            <div class="plan-price"><small>R$</small><span data-price="20">20</span><small>,00</small></div>
             <span class="plan-period">por mês</span>
             <ul class="plan-feats">
               <li>Servidor Cine completo</li>
@@ -328,7 +481,6 @@
               <li>Full HD e 4K</li>
               <li>Suporte via WhatsApp</li>
             </ul>
-            <!-- ⚠️ TROQUE O NÚMERO -->
             <a href="https://wa.me/5500000000000?text=Quero%20o%20plano%20Mensal%20R%2420" target="_blank" rel="noopener" class="btn btn-ghost">Assinar Mensal</a>
           </article>
 
@@ -379,10 +531,83 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ FAQ ══════════════════════════ -->
+    <!-- ═══════════════════ DEPOIMENTOS ═══════════════════ -->
+    <section class="testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>O que dizem por aí</div>
+          <h2>Milhares de pessoas já <em>trocaram</em>.</h2>
+          <p>Veja o que quem já assina o Cineflix tem a dizer.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial reveal">
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Cancelei Netflix, HBO e Disney. Fiquei só com o Cineflix e economizei uma fortuna. Tem tudo que eu assistia e mais.”</blockquote>
+            <footer>
+              <div class="testimonial-avatar">RM</div>
+              <div>
+                <strong>Ricardo M.</strong>
+                <span>Assina há 8 meses</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial reveal">
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Uso no celular, na TV e no notebook. O Servidor Bit é sensacional para os jogos do Brasileirão. Nunca travou.”</blockquote>
+            <footer>
+              <div class="testimonial-avatar">JC</div>
+              <div>
+                <strong>Juliana C.</strong>
+                <span>Assina há 1 ano</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial reveal">
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Melhor custo-benefício que já encontrei. R$ 20 por mês com todo o catálogo e ainda tem série nova toda semana.”</blockquote>
+            <footer>
+              <div class="testimonial-avatar">PS</div>
+              <div>
+                <strong>Paulo S.</strong>
+                <span>Assina há 5 meses</span>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FAIXA DE CONFIANÇA ═══════════════════ -->
+    <section class="trust">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>Pagamento seguro</strong><span>Pix, cartão ou boleto</span></div>
+          </div>
+          <div class="trust-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>Acesso em minutos</strong><span>Liberado rapidamente</span></div>
+          </div>
+          <div class="trust-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0116 0v6a2 2 0 01-2 2H4a2 2 0 01-2-2v-6z" stroke="currentColor" stroke-width="1.6"/><path d="M8 12v4M12 12v4M16 12v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div><strong>Suporte humano</strong><span>WhatsApp todo dia</span></div>
+          </div>
+          <div class="trust-item reveal">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <div><strong>Sem fidelidade</strong><span>Cancele quando quiser</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FAQ ═══════════════════ -->
     <section class="faq" id="faq">
       <div class="container faq-inner">
-        <aside class="faq-side reveal">
+        <aside class="faq-side reveal reveal-left">
           <div class="eyebrow"><span class="eyebrow-dot"></span>Perguntas frequentes</div>
           <h2>Alguma <em>dúvida?</em></h2>
           <p>Aqui estão as perguntas mais comuns. Se não encontrar o que procura, fale com a gente no WhatsApp.</p>
@@ -422,11 +647,27 @@
             <summary><span>Recebo suporte depois de assinar?</span><span class="faq-icon"></span></summary>
             <p>Sim. Você tem suporte via WhatsApp para tirar dúvidas, resolver problemas de configuração e receber atualizações.</p>
           </details>
+          <details class="faq-item reveal">
+            <summary><span>Como recebo meu acesso?</span><span class="faq-icon"></span></summary>
+            <p>Assim que o pagamento é confirmado, você recebe as instruções de instalação e seu login diretamente pelo WhatsApp. Em poucos minutos você já pode assistir.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span>O catálogo inclui lançamentos recentes?</span><span class="faq-icon"></span></summary>
+            <p>Sim. O catálogo é atualizado diariamente com lançamentos de cinema, séries novas, novelas e temporadas que acabaram de chegar nas plataformas.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span>Posso testar antes de assinar?</span><span class="faq-icon"></span></summary>
+            <p>Fale com o suporte no WhatsApp para conhecer as condições de teste. Em alguns casos é possível liberar um período curto de demonstração.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary><span>É seguro usar o Cineflix?</span><span class="faq-icon"></span></summary>
+            <p>Sim. O app funciona como um player de IPTV, você só precisa instalar um aplicativo compatível (como Smarters, IPTV Smarters Pro, ou similar) e fazer login com as credenciais que enviamos.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════ CTA FINAL ══════════════════════════ -->
+    <!-- ═══════════════════ CTA FINAL ═══════════════════ -->
     <section class="final-cta">
       <div class="container">
         <div class="cta-box reveal">
@@ -434,7 +675,7 @@
           <h2>Pronto para ter <em>tudo</em> em um só app?</h2>
           <p>Comece hoje por R$ 20/mês. Sem fidelidade, sem burocracia, com acesso imediato.</p>
           <div class="cta-actions">
-            <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Assinar pelo WhatsApp</a>
+            <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-lg magnetic">Assinar pelo WhatsApp</a>
             <a href="#planos" class="btn btn-ghost btn-lg">Ver planos</a>
           </div>
         </div>
@@ -443,7 +684,7 @@
 
   </main>
 
-  <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
@@ -454,11 +695,11 @@
         <div class="footer-col">
           <h5>Navegação</h5>
           <a href="#sobre">O que é</a>
-          <a href="#video">Demo</a>
+          <a href="#beneficios">Benefícios</a>
           <a href="#servidores">Servidores</a>
-          <a href="#comparacao">Comparativo</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#video">Demo</a>
           <a href="#planos">Planos</a>
-          <a href="#faq">Dúvidas</a>
         </div>
         <div class="footer-col">
           <h5>Atendimento</h5>
@@ -475,9 +716,14 @@
     </div>
   </footer>
 
+  <!-- ═══════════════════ FLOATS ═══════════════════ -->
   <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 0C7.166 0 .001 7.165.001 16c0 2.82.736 5.568 2.13 7.99L0 32l8.22-2.155A15.93 15.93 0 0 0 16.004 32C24.84 32 32 24.836 32 16S24.84 0 16.004 0zm0 29.153a13.11 13.11 0 0 1-6.688-1.83l-.48-.286-4.878 1.28 1.303-4.755-.312-.49A13.11 13.11 0 0 1 2.848 16c0-7.253 5.902-13.153 13.156-13.153 7.253 0 13.148 5.9 13.148 13.153 0 7.254-5.895 13.153-13.148 13.153zm7.21-9.85c-.395-.198-2.34-1.155-2.702-1.286-.363-.132-.628-.198-.89.198-.263.396-1.022 1.286-1.253 1.55-.23.264-.46.297-.855.099-.395-.198-1.667-.615-3.176-1.96-1.174-1.047-1.966-2.34-2.196-2.736-.23-.396-.024-.61.173-.807.178-.177.396-.462.594-.693.197-.23.263-.396.395-.66.132-.264.066-.495-.033-.693-.099-.198-.89-2.144-1.22-2.936-.32-.77-.647-.666-.89-.678l-.756-.014a1.46 1.46 0 0 0-1.056.494c-.363.396-1.386 1.353-1.386 3.3 0 1.946 1.419 3.827 1.617 4.09.197.264 2.79 4.26 6.76 5.976.945.408 1.68.65 2.254.834.947.3 1.81.257 2.49.156.76-.113 2.34-.957 2.67-1.88.33-.925.33-1.716.23-1.88-.098-.166-.362-.264-.757-.462z"/></svg>
   </a>
+
+  <button class="back-to-top" id="backTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
   <script src="js/main.js"></script>
 </body>
