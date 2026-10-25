@@ -1,1 +1,158 @@
-�٩�)�{m�V�
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doçurin • Doces e Travessuras</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Doçurin</span>
+      </a>
+      <nav class="nav">
+        <a href="#home">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="cart-btn" aria-label="Abrir cesta">
+        <span class="cart-icon">🧁</span>
+        <span class="cart-count">0</span>
+      </button>
+      <button class="mobile-menu-btn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <h1 class="hero-title">
+        Doces <span class="gradient">fini</span><br>
+        e travessuras de verdade
+      </h1>
+      <p class="hero-sub">Cada detalhe pensado com carinho.<br>Doces que encantam e fazem o momento brilhar.</p>
+      <div class="hero-actions">
+        <a href="#produtos" class="btn-primary">Ver produtos</a>
+        <a href="#contato" class="btn-secondary">Falar com a gente</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature-icon">🌸</div>
+          <h3 class="feature-title">Feito com carinho</h3>
+          <p class="feature-desc">Ingredientes selecionados para um sabor especial.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎀</div>
+          <h3 class="feature-title">Embalagem bonita</h3>
+          <p class="feature-desc">Presenteie seus momentos com doces que enfeite.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🤍</div>
+          <h3 class="feature-title">Retirada fácil</h3>
+          <p class="feature-desc">Solicite e pegue no nosso ponto. Simples e rápido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="produtos">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nossos Produtos</h2>
+        <p>Doces e travessuras feitos com muito carinho e qualidade</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">🧁</div>
+          <div class="product-body">
+            <h3 class="product-title">Torta de Chocolate</h3>
+            <p class="product-desc">Torta densa, molhadíssima, com chocolate derretido e cobrição crocante.</p>
+            <div class="product-price" data-price="28">R$ <span>28</span></div>
+            <button class="btn-primary add-to-cart" style="padding:10px 24px;">Adicionar</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🍰</div>
+          <div class="product-body">
+            <h3 class="product-title">Bolo de Cenoura</h3>
+            <p class="product-desc">Bolo leve e doce, com cobertura creme e grãos de osteoclasto.</p>
+            <div class="product-price" data-price="32">R$ <span>32</span></div>
+            <button class="btn-primary add-to-cart" style="padding:10px 24px;">Adicionar</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🍬</div>
+          <div class="product-body">
+            <h3 class="product-title">Doces de Manteiga</h3>
+            <p class="product-desc">Estrelas, corações e rosas em calda de brigadeiro.</p>
+            <div class="product-price" data-price="18">R$ <span>18</span></div>
+            <button class="btn-primary add-to-cart" style="padding:10px 24px;">Adicionar</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">🎂</div>
+          <div class="product-body">
+            <h3 class="product-title">Bolo de Aniversário</h3>
+            <p class="product-desc">Personalizado com seu figurinha e nome. Para toda a mesa!</p>
+            <div class="product-price" data-price="89">R$ <span>89</span></div>
+            <button class="btn-primary add-to-cart" style="padding:10px 24px;">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>Doçurin
+      </a>
+      <h2>Sobre a Doçurin</h2>
+      <p>Somos uma pequena produtora de doces artesanais, donde vêm a qualidade e o carinho que você busca em cada sobremesa.</p>
+      <p>Nossos produtos são feitos com ingredientes selecionados e decorados com muito amor e paciência.</p>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="container">
+      <h3>Fale conosco</h3>
+      <p>Preencha o formulário e retornaremos em até 24 horas.</p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <p>&copy; 2026 Doçurin • Doces e Travessuras • Produção Artesanal</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
