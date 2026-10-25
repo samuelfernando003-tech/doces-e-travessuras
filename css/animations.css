@@ -1,15 +1,10 @@
 /* =========================================================
    CINEFLIX · ANIMATIONS
-   Keyframes, reveals, tilts e micro-interações
    ========================================================= */
-
-/* ─────── REVEALS ─────── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition:
-    opacity 0.9s var(--ease-out),
-    transform 0.9s var(--ease-out);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
   will-change: opacity, transform;
 }
 .reveal.is-visible {
@@ -17,45 +12,22 @@
   transform: translateY(0);
 }
 
-/* Stagger dentro de grupos */
-[data-stagger].reveal { transition-delay: 0.05s; }
-
-/* ─────── KEYFRAMES ─────── */
 @keyframes orbFloat {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33%      { transform: translate(-40px, 30px) scale(1.1); }
   66%      { transform: translate(30px, -20px) scale(0.95); }
 }
-
 @keyframes chipFloat {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-8px); }
 }
-
 @keyframes pulseDot {
   0%, 100% { opacity: 1; transform: scale(1); }
   50%      { opacity: 0.4; transform: scale(0.8); }
 }
 
-@keyframes posterShine {
-  0%   { transform: translateX(-100%); }
-  60%  { transform: translateX(100%); }
-  100% { transform: translateX(100%); }
-}
+body.no-scroll { overflow: hidden; }
 
-/* ─────── TILT (JS alimenta) ─────── */
-[data-tilt] {
-  transition: transform 0.4s var(--ease-out);
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-/* ─────── MENU MOBILE — controle de scroll ─────── */
-body.no-scroll {
-  overflow: hidden;
-}
-
-/* ─────── ACESSIBILIDADE ─────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
