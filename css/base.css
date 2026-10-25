@@ -1,0 +1,166 @@
+/* =========================================================
+   CINEFLIX · BASE
+   Reset, variáveis, tipografia, utilitários
+   ========================================================= */
+
+:root {
+  /* Palette — roxo + preto monocromático */
+  --bg:            #06040d;
+  --bg-elevated:   #0a0716;
+  --surface:       #100a22;
+  --surface-2:     #160e2e;
+
+  --purple-100:    #ede9fe;
+  --purple-200:    #ddd6fe;
+  --purple-300:    #c4b5fd;
+  --purple-400:    #a78bfa;
+  --purple-500:    #8b5cf6;
+  --purple-600:    #7c3aed;
+  --purple-700:    #6d28d9;
+  --purple-900:    #2e1065;
+
+  --line:          rgba(196, 181, 253, 0.09);
+  --line-strong:   rgba(196, 181, 253, 0.20);
+
+  --text:          #f5f3ff;
+  --text-dim:      #b8aed6;
+  --muted:         #7a6f96;
+  --muted-2:       #554a6e;
+
+  --font-display:  'Bricolage Grotesque', 'Inter', sans-serif;
+  --font-body:     'Inter', sans-serif;
+  --font-accent:   'Instrument Serif', serif;
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+
+  --container: 1200px;
+  --gutter: 24px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+h1 { font-size: clamp(2.6rem, 6vw, 4.8rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 700; }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 600; }
+
+em {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--purple-300);
+  letter-spacing: -0.02em;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+img, svg { display: block; max-width: 100%; }
+ul, ol { list-style: none; }
+strong { color: var(--text); font-weight: 600; }
+
+::selection {
+  background: var(--purple-600);
+  color: var(--purple-100);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Grain overlay */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--purple-600), var(--purple-400));
+  z-index: 1000;
+  transition: width 0.08s linear;
+}
+
+/* Section base */
+section {
+  position: relative;
+  padding: 120px 0;
+}
+
+/* Eyebrow */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--purple-300);
+  margin-bottom: 20px;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--purple-500);
+  box-shadow: 0 0 12px var(--purple-500);
+}
+
+/* Section header */
+.section-head {
+  max-width: 640px;
+  margin-bottom: 72px;
+}
+.section-head p {
+  margin-top: 18px;
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
