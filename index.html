@@ -32,6 +32,7 @@
 
       <nav class="nav-links" aria-label="Principal">
         <a href="#sobre">O que é</a>
+        <a href="#video">Demo</a>
         <a href="#servidores">Servidores</a>
         <a href="#comparacao">Comparativo</a>
         <a href="#planos">Planos</a>
@@ -40,10 +41,8 @@
 
       <div class="header-actions">
         <a href="#planos" class="btn btn-ghost btn-sm">Planos</a>
-        <!-- TROQUE 5500000000000 PELO SEU WHATSAPP -->
-        <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-          Assinar
-        </a>
+        <!-- ⚠️ TROQUE 5500000000000 PELO SEU WHATSAPP -->
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Assinar</a>
         <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
           <span></span><span></span>
         </button>
@@ -54,19 +53,19 @@
   <div class="mobile-menu" id="mobileMenu">
     <nav>
       <a href="#sobre">O que é</a>
+      <a href="#video">Demo</a>
       <a href="#servidores">Servidores</a>
       <a href="#comparacao">Comparativo</a>
       <a href="#planos">Planos</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary">
-      Assinar pelo WhatsApp
-    </a>
+    <!-- ⚠️ TROQUE O NÚMERO AQUI TAMBÉM -->
+    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary">Assinar pelo WhatsApp</a>
   </div>
 
   <main>
 
-    <!-- ══════════════════════════ HERO ══════════════════════════ -->
+    <!-- ══════════════════════════ HERO COM VÍDEO ══════════════════════════ -->
     <section class="hero" id="topo">
       <div class="hero-bg" aria-hidden="true">
         <div class="hero-orb"></div>
@@ -80,7 +79,7 @@
             Novo · Catálogo atualizado hoje
           </div>
 
-          <h1 class="hero-title reveal" data-stagger>
+          <h1 class="hero-title reveal">
             Todo o streaming do mundo. Em <em>um</em> só app.
           </h1>
 
@@ -92,63 +91,61 @@
           </p>
 
           <div class="hero-actions reveal">
+            <!-- ⚠️ TROQUE O NÚMERO -->
             <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
               Começar agora
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="#planos" class="btn btn-ghost btn-lg">Ver os planos</a>
+            <a href="#video" class="btn btn-ghost btn-lg">Ver demo</a>
           </div>
 
           <dl class="hero-stats reveal" aria-label="Números do catálogo">
-            <div>
-              <dt>Filmes</dt>
-              <dd data-count="60000" data-suffix="+">0</dd>
-            </div>
-            <div>
-              <dt>Séries</dt>
-              <dd data-count="20000" data-suffix="+">0</dd>
-            </div>
-            <div>
-              <dt>Canais</dt>
-              <dd data-count="1279">0</dd>
-            </div>
-            <div>
-              <dt>Por mês</dt>
-              <dd>R$20</dd>
-            </div>
+            <div><dt>Filmes</dt><dd data-count="60000" data-suffix="+">0</dd></div>
+            <div><dt>Séries</dt><dd data-count="20000" data-suffix="+">0</dd></div>
+            <div><dt>Canais</dt><dd data-count="1279">0</dd></div>
+            <div><dt>Por mês</dt><dd>R$20</dd></div>
           </dl>
         </div>
 
-        <div class="hero-visual reveal" data-tilt>
+        <!-- ══════════════════════════ VÍDEO NO MOCKUP ══════════════════════════ -->
+        <div class="hero-visual reveal">
           <div class="device">
             <div class="device-chrome">
               <span></span><span></span><span></span>
-              <div class="device-live">
-                <i></i> AO VIVO
-              </div>
+              <div class="device-live"><i></i> AO VIVO</div>
             </div>
             <div class="device-screen">
-              <div class="device-glow"></div>
-              <div class="poster-grid">
-                <div class="poster poster-1"></div>
-                <div class="poster poster-2"></div>
-                <div class="poster poster-3"></div>
-                <div class="poster poster-4"></div>
-                <div class="poster poster-5"></div>
-                <div class="poster poster-6"></div>
-              </div>
+              <!-- ⚠️ O VÍDEO FICA AQUI. COLOQUE O ARQUIVO EM assets/demo.mp4 -->
+              <video class="demo-video" autoplay muted loop playsinline preload="metadata" poster="">
+                <source src="assets/demo.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo HTML5.
+              </video>
             </div>
           </div>
-
-          <div class="float-chip chip-price">
-            <span>R$ 20</span>
-            <small>/mês</small>
-          </div>
-
+          <div class="float-chip chip-price"><span>R$ 20</span><small>/mês</small></div>
           <div class="float-chip chip-quality">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6L12 2z" fill="currentColor"/></svg>
             4K · HDR
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ SEÇÃO DE VÍDEO DEDICADA ══════════════════════════ -->
+    <section class="video-section" id="video">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Veja em ação</div>
+          <h2>O Cineflix <em>por dentro</em>.</h2>
+          <p>Uma prévia real da interface, do catálogo e da experiência de navegação do app.</p>
+        </div>
+
+        <div class="video-wrapper reveal">
+          <!-- O MESMO ARQUIVO DE VÍDEO, COM CONTROLES PARA O USUÁRIO ASSISTIR -->
+          <video class="demo-video-large" controls playsinline preload="metadata">
+            <source src="assets/demo.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
         </div>
       </div>
     </section>
@@ -170,18 +167,12 @@
         <span>SporTV</span><span aria-hidden="true">·</span>
       </div>
       <div class="marquee-track" aria-hidden="true">
-        <span>Netflix</span><span>·</span>
-        <span>Globoplay</span><span>·</span>
-        <span>HBO Max</span><span>·</span>
-        <span>Disney+</span><span>·</span>
-        <span>Star+</span><span>·</span>
-        <span>Paramount+</span><span>·</span>
-        <span>Apple TV+</span><span>·</span>
-        <span>Prime Video</span><span>·</span>
-        <span>Telecine</span><span>·</span>
-        <span>Premiere</span><span>·</span>
-        <span>ESPN</span><span>·</span>
-        <span>SporTV</span><span>·</span>
+        <span>Netflix</span><span>·</span><span>Globoplay</span><span>·</span>
+        <span>HBO Max</span><span>·</span><span>Disney+</span><span>·</span>
+        <span>Star+</span><span>·</span><span>Paramount+</span><span>·</span>
+        <span>Apple TV+</span><span>·</span><span>Prime Video</span><span>·</span>
+        <span>Telecine</span><span>·</span><span>Premiere</span><span>·</span>
+        <span>ESPN</span><span>·</span><span>SporTV</span><span>·</span>
       </div>
     </div>
 
@@ -190,58 +181,32 @@
       <div class="container about-inner">
         <div class="about-head">
           <div class="eyebrow reveal"><span class="eyebrow-dot"></span>O que é o Cineflix</div>
-          <h2 class="reveal">
-            Um app. <em>Todas</em> as plataformas.
-          </h2>
+          <h2 class="reveal">Um app. <em>Todas</em> as plataformas.</h2>
         </div>
 
         <div class="about-grid">
           <div class="about-text reveal">
-            <p>
-              O <strong>Cineflix</strong> é um aplicativo de entretenimento IPTV que reúne em um só lugar o melhor
-              catálogo de filmes, séries, novelas, desenhos e documentários do mundo — mais os canais ao vivo
-              que você não encontra em outro lugar.
-            </p>
-            <p>
-              Em vez de pagar 8 assinaturas diferentes todo mês, você paga <strong>uma única mensalidade</strong>
-              de R$&nbsp;20 e tem acesso a tudo. Sem fidelidade, sem burocracia, sem taxa de adesão.
-            </p>
-
-            <div class="about-quote">
-              <p>
-                “Cancelamos oito assinaturas. Ficamos com <em>uma</em>.”
-              </p>
-            </div>
+            <p>O <strong>Cineflix</strong> é um aplicativo de entretenimento IPTV que reúne em um só lugar o melhor catálogo de filmes, séries, novelas, desenhos e documentários do mundo — mais os canais ao vivo que você não encontra em outro lugar.</p>
+            <p>Em vez de pagar 8 assinaturas diferentes todo mês, você paga <strong>uma única mensalidade</strong> de R$&nbsp;20 e tem acesso a tudo. Sem fidelidade, sem burocracia, sem taxa de adesão.</p>
+            <div class="about-quote"><p>“Cancelamos oito assinaturas. Ficamos com <em>uma</em>.”</p></div>
           </div>
 
           <ul class="about-features reveal">
             <li>
               <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Acesso imediato</strong>
-                <span>Liberado em minutos após o pagamento.</span>
-              </div>
+              <div><strong>Acesso imediato</strong><span>Liberado em minutos após o pagamento.</span></div>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Em qualquer tela</strong>
-                <span>Celular, tablet, PC, Smart TV e TV Box.</span>
-              </div>
+              <div><strong>Em qualquer tela</strong><span>Celular, tablet, PC, Smart TV e TV Box.</span></div>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Full HD e 4K</strong>
-                <span>Qualidade de imagem para a maioria do catálogo.</span>
-              </div>
+              <div><strong>Full HD e 4K</strong><span>Qualidade de imagem para a maioria do catálogo.</span></div>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Lançamentos toda semana</strong>
-                <span>Catálogo atualizado diariamente.</span>
-              </div>
+              <div><strong>Lançamentos toda semana</strong><span>Catálogo atualizado diariamente.</span></div>
             </li>
           </ul>
         </div>
@@ -252,22 +217,10 @@
     <section class="stats-band">
       <div class="container">
         <div class="stats-row">
-          <div class="stat reveal">
-            <span class="stat-num" data-count="60000" data-suffix="+">0</span>
-            <span class="stat-label">Filmes completos</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-num" data-count="20000" data-suffix="+">0</span>
-            <span class="stat-label">Séries e novelas</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-num" data-count="1279">0</span>
-            <span class="stat-label">Canais ao vivo</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-num" data-count="80000" data-suffix="+">0</span>
-            <span class="stat-label">Títulos totais</span>
-          </div>
+          <div class="stat reveal"><span class="stat-num" data-count="60000" data-suffix="+">0</span><span class="stat-label">Filmes completos</span></div>
+          <div class="stat reveal"><span class="stat-num" data-count="20000" data-suffix="+">0</span><span class="stat-label">Séries e novelas</span></div>
+          <div class="stat reveal"><span class="stat-num" data-count="1279">0</span><span class="stat-label">Canais ao vivo</span></div>
+          <div class="stat reveal"><span class="stat-num" data-count="80000" data-suffix="+">0</span><span class="stat-label">Títulos totais</span></div>
         </div>
       </div>
     </section>
@@ -284,15 +237,9 @@
         <div class="server-grid">
           <article class="server-card reveal">
             <span class="server-ghost">C</span>
-            <div class="server-tag">
-              <span class="tag-dot"></span>
-              Servidor Cine
-            </div>
+            <div class="server-tag"><span class="tag-dot"></span>Servidor Cine</div>
             <h3>O catálogo completo</h3>
-            <p>
-              O coração do aplicativo. Filmes, séries, novelas, desenhos e documentários, além dos catálogos
-              das principais plataformas de streaming do mundo.
-            </p>
+            <p>O coração do aplicativo. Filmes, séries, novelas, desenhos e documentários, além dos catálogos das principais plataformas de streaming do mundo.</p>
             <ul>
               <li>+60.000 filmes de todos os gêneros</li>
               <li>+20.000 séries e temporadas completas</li>
@@ -303,15 +250,9 @@
 
           <article class="server-card server-card--bit reveal">
             <span class="server-ghost">B</span>
-            <div class="server-tag">
-              <span class="tag-dot"></span>
-              Servidor Bit
-            </div>
+            <div class="server-tag"><span class="tag-dot"></span>Servidor Bit</div>
             <h3>Focado em canais ao vivo</h3>
-            <p>
-              Para quem não quer perder um segundo do que acontece em tempo real. Jogos de futebol,
-              campeonatos internacionais e uma grade completa de canais americanos.
-            </p>
+            <p>Para quem não quer perder um segundo do que acontece em tempo real. Jogos de futebol, campeonatos internacionais e uma grade completa de canais americanos.</p>
             <ul>
               <li>Futebol ao vivo (Brasileirão, Champions, Libertadores)</li>
               <li>Canais esportivos e pay-per-view</li>
@@ -334,10 +275,7 @@
 
         <div class="compare-grid">
           <div class="compare-col compare-col--them reveal">
-            <header>
-              <span class="compare-kicker">Assinando separadamente</span>
-              <span class="compare-total">R$&nbsp;245<small>/mês</small></span>
-            </header>
+            <header><span class="compare-kicker">Assinando separadamente</span><span class="compare-total">R$&nbsp;245<small>/mês</small></span></header>
             <ul>
               <li><span>Netflix</span><span>R$ 44,90</span></li>
               <li><span>Globoplay</span><span>R$ 49,90</span></li>
@@ -352,10 +290,7 @@
 
           <div class="compare-col compare-col--us reveal">
             <span class="compare-badge">ECONOMIZE 91%</span>
-            <header>
-              <span class="compare-kicker">Com o Cineflix</span>
-              <span class="compare-total">R$&nbsp;20<small>/mês</small></span>
-            </header>
+            <header><span class="compare-kicker">Com o Cineflix</span><span class="compare-total">R$&nbsp;20<small>/mês</small></span></header>
             <ul>
               <li><span>Netflix</span><span class="yes">Incluso</span></li>
               <li><span>Globoplay</span><span class="yes">Incluso</span></li>
@@ -368,10 +303,7 @@
             </ul>
           </div>
         </div>
-
-        <p class="compare-note reveal">
-          * Valores de referência aproximados dos planos mensais de cada plataforma. Podem sofrer alterações sem aviso prévio.
-        </p>
+        <p class="compare-note reveal">* Valores de referência aproximados dos planos mensais de cada plataforma. Podem sofrer alterações sem aviso prévio.</p>
       </div>
     </section>
 
@@ -386,13 +318,8 @@
 
         <div class="plans-grid">
           <article class="plan reveal">
-            <header>
-              <span class="plan-name">Mensal</span>
-              <p class="plan-desc">Para começar sem compromisso.</p>
-            </header>
-            <div class="plan-price">
-              <small>R$</small>20<small>,00</small>
-            </div>
+            <header><span class="plan-name">Mensal</span><p class="plan-desc">Para começar sem compromisso.</p></header>
+            <div class="plan-price"><small>R$</small>20<small>,00</small></div>
             <span class="plan-period">por mês</span>
             <ul class="plan-feats">
               <li>Servidor Cine completo</li>
@@ -401,17 +328,13 @@
               <li>Full HD e 4K</li>
               <li>Suporte via WhatsApp</li>
             </ul>
+            <!-- ⚠️ TROQUE O NÚMERO -->
             <a href="https://wa.me/5500000000000?text=Quero%20o%20plano%20Mensal%20R%2420" target="_blank" rel="noopener" class="btn btn-ghost">Assinar Mensal</a>
           </article>
 
           <article class="plan reveal">
-            <header>
-              <span class="plan-name">Trimestral</span>
-              <p class="plan-desc">3 meses de acesso completo.</p>
-            </header>
-            <div class="plan-price">
-              <small>R$</small>69<small>,90</small>
-            </div>
+            <header><span class="plan-name">Trimestral</span><p class="plan-desc">3 meses de acesso completo.</p></header>
+            <div class="plan-price"><small>R$</small>69<small>,90</small></div>
             <span class="plan-period">a cada 3 meses</span>
             <ul class="plan-feats">
               <li>Tudo do plano Mensal</li>
@@ -424,13 +347,8 @@
           </article>
 
           <article class="plan reveal">
-            <header>
-              <span class="plan-name">Semestral</span>
-              <p class="plan-desc">6 meses pelo preço do trimestral.</p>
-            </header>
-            <div class="plan-price">
-              <small>R$</small>69<small>,90</small>
-            </div>
+            <header><span class="plan-name">Semestral</span><p class="plan-desc">6 meses pelo preço do trimestral.</p></header>
+            <div class="plan-price"><small>R$</small>69<small>,90</small></div>
             <span class="plan-period">a cada 6 meses</span>
             <ul class="plan-feats">
               <li>Tudo do plano Mensal</li>
@@ -444,16 +362,9 @@
 
           <article class="plan plan--featured reveal">
             <span class="plan-tag">Oferta especial</span>
-            <header>
-              <span class="plan-name">Anual</span>
-              <p class="plan-desc">O melhor custo por mês.</p>
-            </header>
-            <div class="plan-price">
-              <small>R$</small>97<small>,90</small>
-            </div>
-            <span class="plan-period">
-              <s>R$ 129,90</s> · 12 meses · R$ 8,16/mês
-            </span>
+            <header><span class="plan-name">Anual</span><p class="plan-desc">O melhor custo por mês.</p></header>
+            <div class="plan-price"><small>R$</small>97<small>,90</small></div>
+            <span class="plan-period"><s>R$ 129,90</s> · 12 meses · R$ 8,16/mês</span>
             <ul class="plan-feats">
               <li>Tudo do plano Mensal</li>
               <li>12 meses garantidos</li>
@@ -464,7 +375,6 @@
             <a href="https://wa.me/5500000000000?text=Quero%20o%20plano%20Anual%20R%2497%2C90" target="_blank" rel="noopener" class="btn btn-primary">Assinar Anual</a>
           </article>
         </div>
-
         <p class="plans-note reveal">Pagamento via Pix, cartão ou boleto · Acesso em minutos após a confirmação.</p>
       </div>
     </section>
@@ -481,66 +391,35 @@
 
         <div class="faq-list">
           <details class="faq-item reveal" open>
-            <summary>
-              <span>O que é o Cineflix?</span>
-              <span class="faq-icon"></span>
-            </summary>
+            <summary><span>O que é o Cineflix?</span><span class="faq-icon"></span></summary>
             <p>Um aplicativo de entretenimento IPTV que reúne mais de 80.000 títulos entre filmes, séries, novelas, desenhos, documentários e canais ao vivo — incluindo os catálogos das principais plataformas de streaming do mundo.</p>
           </details>
-
           <details class="faq-item reveal">
-            <summary>
-              <span>Em quais dispositivos posso assistir?</span>
-              <span class="faq-icon"></span>
-            </summary>
+            <summary><span>Em quais dispositivos posso assistir?</span><span class="faq-icon"></span></summary>
             <p>Celular (Android e iOS), tablet, computador, Smart TV (Samsung, LG, Android TV), TV Box, Fire Stick e outros dispositivos compatíveis com aplicativos de IPTV.</p>
           </details>
-
           <details class="faq-item reveal">
-            <summary>
-              <span>Preciso de internet rápida?</span>
-              <span class="faq-icon"></span>
-            </summary>
+            <summary><span>Preciso de internet rápida?</span><span class="faq-icon"></span></summary>
             <p>Recomendamos no mínimo 10 Mbps para HD e 25 Mbps para Full HD/4K. Quanto mais estável a conexão, melhor a experiência.</p>
           </details>
-
           <details class="faq-item reveal">
-            <summary>
-              <span>O pagamento é seguro?</span>
-              <span class="faq-icon"></span>
-            </summary>
+            <summary><span>O pagamento é seguro?</span><span class="faq-icon"></span></summary>
             <p>Sim. Trabalhamos com Pix, cartão de crédito e boleto. O acesso é liberado em poucos minutos após a confirmação do pagamento.</p>
           </details>
-
           <details class="faq-item reveal">
-            <summary>
-              <span>Posso assistir em mais de um dispositivo ao mesmo tempo?</span>
-              <span class="faq-icon"></span>
-            </summary>
+            <summary><span>Posso assistir em mais de um dispositivo ao mesmo tempo?</span><span class="faq-icon"></span></summary>
             <p>Sim. Dependendo do plano, é possível assistir em mais de um dispositivo simultaneamente. Fale com nosso suporte para conhecer as opções.</p>
           </details>
-
           <details class="faq-item reveal">
-            <summary>
-              <span>Tem fidelidade ou multa de cancelamento?</span>
-              <span class="faq-icon"></span>
-            </summary>
+            <summary><span>Tem fidelidade ou multa de cancelamento?</span><span class="faq-icon"></span></summary>
             <p>Não. Você não tem fidelidade, não paga taxa de adesão e pode cancelar quando quiser. Basta não renovar no próximo período.</p>
           </details>
-
           <details class="faq-item reveal">
-            <summary>
-              <span>Qual a diferença entre os dois servidores?</span>
-              <span class="faq-icon"></span>
-            </summary>
+            <summary><span>Qual a diferença entre os dois servidores?</span><span class="faq-icon"></span></summary>
             <p>O Servidor Cine é focado no catálogo de filmes e séries. O Servidor Bit é focado em canais ao vivo, especialmente jogos de futebol e canais americanos. Ambos estão inclusos em todos os planos.</p>
           </details>
-
           <details class="faq-item reveal">
-            <summary>
-              <span>Recebo suporte depois de assinar?</span>
-              <span class="faq-icon"></span>
-            </summary>
+            <summary><span>Recebo suporte depois de assinar?</span><span class="faq-icon"></span></summary>
             <p>Sim. Você tem suporte via WhatsApp para tirar dúvidas, resolver problemas de configuração e receber atualizações.</p>
           </details>
         </div>
@@ -555,9 +434,7 @@
           <h2>Pronto para ter <em>tudo</em> em um só app?</h2>
           <p>Comece hoje por R$ 20/mês. Sem fidelidade, sem burocracia, com acesso imediato.</p>
           <div class="cta-actions">
-            <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-              Assinar pelo WhatsApp
-            </a>
+            <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20assinar%20o%20Cineflix" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Assinar pelo WhatsApp</a>
             <a href="#planos" class="btn btn-ghost btn-lg">Ver planos</a>
           </div>
         </div>
@@ -571,22 +448,18 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="#" class="brand">
-            <span class="brand-mark">C</span>
-            <span class="brand-name">Cineflix</span>
-          </a>
+          <a href="#" class="brand"><span class="brand-mark">C</span><span class="brand-name">Cineflix</span></a>
           <p>O melhor do entretenimento mundial em um só aplicativo. Filmes, séries, novelas e canais ao vivo por um preço que cabe no bolso.</p>
         </div>
-
         <div class="footer-col">
           <h5>Navegação</h5>
           <a href="#sobre">O que é</a>
+          <a href="#video">Demo</a>
           <a href="#servidores">Servidores</a>
           <a href="#comparacao">Comparativo</a>
           <a href="#planos">Planos</a>
           <a href="#faq">Dúvidas</a>
         </div>
-
         <div class="footer-col">
           <h5>Atendimento</h5>
           <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a>
@@ -595,7 +468,6 @@
           <a href="#">Política de privacidade</a>
         </div>
       </div>
-
       <div class="footer-bottom">
         <span>© <span id="year"></span> Cineflix. Todos os direitos reservados.</span>
         <span>Feito para quem ama entretenimento.</span>
